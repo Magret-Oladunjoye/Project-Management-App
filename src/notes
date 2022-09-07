@@ -1,0 +1,7 @@
+user Controller needs to get access to user service so controller can attempt to delete users, update, fetch, etc
+
+user controller also needs to make use of new auth service for sign up and sign in users
+
+Auth service needs to create and query users so it needs the user service
+
+Aurth service wont use users repo directy but will use functionality exposed inside the user service 
