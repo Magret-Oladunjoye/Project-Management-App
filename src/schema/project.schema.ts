@@ -6,43 +6,43 @@ import { User } from "./user.schema";
 @Schema({collection: 'projects'})
 export class Project {
   @Prop({auto: true})
-  project_id: Types.ObjectId;
+  Project_id: Types.ObjectId;
 
   @Prop()
-  project_name: string;
+  Project_Name: string;
 
   @Prop()
-  project_size: projectSize;
+  Project_Size: string;
 
   @Prop()
-  project_start_date: Date;
+  Project_Start_Date: Date;
 
   @Prop()   
-  project_end_date: Date;
+  Project_End_Date: Date;
 
   @Prop()
-  working_employees: User[]; //number of emps working on a project
+  Working_Employees: string; //number of emps working on a project
 
   @Prop()
-  manager: User; 
+  Manager: string; 
 
   constructor(
-    _project_id: Types.ObjectId,
-    project_name: string,
-    project_size: projectSize,
-    project_start_date: Date,
-    project_end_date: Date,
-    working_employees: User[],
-    Manager: User,
+    Project_id: Types.ObjectId,
+    Project_Name: string,
+    Project_Size: string,
+    Project_Start_Date: Date,
+    Project_End_Date: Date,
+    Working_Employees: string,
+    Manager: string,
 
   ) {
-      this.project_id = new Types.ObjectId(this.project_id);
-      this.project_name = project_name;
-      this.project_size = project_size;
-      this.project_start_date = project_start_date;
-      this.project_end_date = project_end_date;
-      this.working_employees = working_employees;
-      this.manager = Manager
+      this.Project_id = new Types.ObjectId(this.Project_id);
+      this.Project_Name = Project_Name;
+      this.Project_Size = Project_Size;
+      this.Project_Start_Date = Project_Start_Date;
+      this.Project_End_Date = Project_End_Date;
+      this.Working_Employees = Working_Employees;
+      this.Manager = Manager
 
 
  

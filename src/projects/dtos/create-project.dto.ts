@@ -7,7 +7,7 @@ export class CreateProjectDto {
   Project_Name: string;
 
   @IsString()
-  Project_Size: projectSize;
+  Project_Size: string;
   
   @IsDate()
   Project_Start_Date: Date;
@@ -16,9 +16,9 @@ export class CreateProjectDto {
   Project_End_Date: Date;
   
   @IsNumber()
-  Working_Employees: User[];
+  Working_Employees: string;
   
   @IsString()
-  Manager: User;
+  Manager: string;
   
 }

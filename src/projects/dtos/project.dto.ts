@@ -3,11 +3,12 @@ import { projectSize } from '../projects.size.enum';
 
 
 export class ProjectDto {
+
   @Expose()
   Project_Name: string;
 
   @Expose()
-  Project_Size: projectSize;
+  Project_Size: string;
   
   @Expose()
   Project_Start_Date: Date;

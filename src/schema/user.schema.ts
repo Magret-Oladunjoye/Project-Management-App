@@ -37,8 +37,6 @@ export class User {
   phone_no: number;
 
 
-
-
   constructor(
     _id: Types.ObjectId,
     firstName: string,

@@ -28,11 +28,12 @@ import { CreateProjectDto } from 'src/projects/dtos/create-project.dto';
   
     @Post('/newproject')
     async newproject(@Body() body: CreateProjectDto, @Session() session: any) {
+      console.log(body)
       const project = await this.projectsService.newproject(body.Project_Name, body.Project_Size, body.Project_Start_Date, body.Project_End_Date, body.Working_Employees, body.Manager);
-      session.userId = project.id;
       return project;
     }
 
 
+    
   }
   

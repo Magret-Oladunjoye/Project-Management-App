@@ -29,16 +29,13 @@ import { UpdateShiftDto } from './dtos/update-shift.dto';
   
     @Post('/newshift')
     async newshift(@Body() body: CreateShiftDto, @Session() session: any) {
-      console.log("/newshift works")
       const shift = await this.shiftsService.newShift(body);
       session.userId = shift.id;
-      console.log('new shift baby');
       return shift;
     }
     @Post('/getshifts')
     async getshifts(@Body() body: GetShiftDto, @Session() session: any) {
       const shift = await this.shiftsService.getShift(body.user_id);
-      console.log('new shift baby');
       return shift;
     }
 
