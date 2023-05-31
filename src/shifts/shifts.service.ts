@@ -33,7 +33,6 @@ export class ShiftsService {
     console.log(user_id);   
     const shifts = await this.shiftModel.find({user_id:new Types.ObjectId(user_id)});
     shifts.forEach(sh=>sh._id=sh._id.toString())
-    console.log("www",shifts)
     return shifts;
   }
 

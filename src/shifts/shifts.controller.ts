@@ -12,7 +12,6 @@ import {
     UseGuards,
   } from '@nestjs/common';
   import { Serialize } from '../interceptors/serialize.interceptor';
-  import { AuthGuard } from '../guards/auth.guard';
 import { CreateShiftDto } from './dtos/create-shifts.dto';
 import { ShiftDto } from './dtos/shifts.dto';
 import { ShiftsService } from './shifts.service';
@@ -30,7 +29,6 @@ import { UpdateShiftDto } from './dtos/update-shift.dto';
     @Post('/newshift')
     async newshift(@Body() body: CreateShiftDto, @Session() session: any) {
       const shift = await this.shiftsService.newShift(body);
-      session.userId = shift.id;
       return shift;
     }
     @Post('/getshifts')
